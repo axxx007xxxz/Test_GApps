@@ -14,7 +14,7 @@ OUT=$TOP/out
 BUILD=$TOP/build
 METAINF=$BUILD/meta
 COMMON=$TOP/common/proprietary
-GLOG=$TOP/gapps_log
+GLOG=$OUT/gapps_log
 ADDOND=$TOP/addond.sh
 
 ##
