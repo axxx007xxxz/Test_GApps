@@ -23,7 +23,7 @@ ADDOND=$TOP/addond.sh
 #
 function clean() {
     echo "Cleaning up..."
-    rm -r $OUT/*
+    rm -r $OUT/$GARCH
     rm /tmp/$BUILDZIP
     return $?
 }
@@ -34,6 +34,7 @@ function failed() {
 }
 
 function create() {
+    test -f $LOG && rm -f $LOG
     echo "Starting GApps compilation" > $LOG
     echo "ARCH= $GARCH" >> $LOG
     echo "OS= $(uname -s -r)" >> $LOG
