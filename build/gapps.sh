@@ -1,10 +1,11 @@
 #!/bin/bash
 # (c) Joey Rizzoli, 2015
 # (c) Paul Keith, 2017
+# (c) axxx007xxxz, 2017
 # Released under GPL v2 License
 
 ##
-# var
+# Various
 #
 DATE=$(date +%F-%H-%M)
 TOP=$(realpath .)
@@ -18,11 +19,11 @@ LOG=$OUT/log
 ADDOND=$TOP/addond.sh
 
 ##
-# functions
+# Functions
 #
 function clean() {
     echo "Cleaning up..."
-    rm -r $OUT/$GARCH
+    rm -r $OUT/*
     rm /tmp/$BUILDZIP
     return $?
 }
@@ -33,7 +34,6 @@ function failed() {
 }
 
 function create() {
-    test -f $LOG && rm -f $LOG
     echo "Starting GApps compilation" > $LOG
     echo "ARCH= $GARCH" >> $LOG
     echo "OS= $(uname -s -r)" >> $LOG
@@ -103,7 +103,7 @@ function getmd5() {
 }
 
 ##
-# main
+# Main
 #
 if [ -x $(which realpath) ]; then
     echo "Realpath found!" >> $LOG

@@ -1,9 +1,8 @@
-# build paths
+# Build paths
 TOPDIR := .
 BUILD_SYSTEM := $(TOPDIR)/build
 BUILD_GAPPS := $(BUILD_SYSTEM)/gapps.sh
 OUTDIR := $(TOPDIR)/out
-LOG_BUILD := $(OUTDIR)/log
 
 distclean:
 	@rm -fr $(OUTDIR)

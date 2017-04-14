@@ -1,6 +1,7 @@
-# vendor_gapps
+# Test_GApps
 
-**GApps for android devices**
+**GApps for Android devices**
+
 
 Build
 -------------------
@@ -11,15 +12,16 @@ _make distclean_
 - Remove output directory
 
 _make gapps_arm_
-- compile signed flashable GApps for arm
+- Compile signed flashable GApps for arm
 
 _make gapps_arm64_
-- compile signed flashable GApps for arm64
+- Compile signed flashable GApps for arm64
 
 _make gapps_x86_
-- compile signed flashable GApps for x86 (NOT supported atm)
+- Compile signed flashable GApps for x86 (NOT supported atm)
 
-Thanks and Credits
+
+Thanks and credits
 -------------------
 
 gmrt
